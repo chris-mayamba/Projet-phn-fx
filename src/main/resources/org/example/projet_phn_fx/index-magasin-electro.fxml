@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="758.0" style="-fx-background-color: #FAD59A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="69.0" prefWidth="757.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="765.0" text="Bienvenue dans votre application de gestion" textAlignment="CENTER">
+               <font>
+                  <Font name="Leelawadee UI" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="38.0" prefWidth="758.0">
+         <children>
+            <Label text="Type de produits" />
+            <ChoiceBox prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="46.0" prefWidth="758.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="Nom du produit" />
+            <TextField />
+         </children>
+      </HBox>
+      <HBox prefHeight="61.0" prefWidth="758.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="Fabricant" />
+            <TextField />
+         </children>
+      </HBox>
+      <HBox prefHeight="46.0" prefWidth="758.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="Prix" />
+            <TextField />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="CPU" />
+            <TextField />
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="758.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="Type d'accessoires" />
+            <TextField />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: F0F1C5;" text="Quantité à ajouter" />
+            <TextField />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: F0F1C5;" text="Ram" />
+            <TextField prefHeight="25.0" prefWidth="86.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: F0F1C5;" text="Rom" />
+            <TextField prefHeight="25.0" prefWidth="96.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: F0F1C5;" text="OS" />
+            <TextField prefHeight="25.0" prefWidth="96.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="757.0">
+         <children>
+            <Button id="addProduct" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #90C67C;" text="Ajouter le produit" />
+            <Separator orientation="VERTICAL" prefHeight="56.0" prefWidth="28.0" />
+            <Button id="dropProduct" mnemonicParsing="false" prefHeight="43.0" prefWidth="113.0" style="-fx-background-color: #F7374F;" text="Retirer un produit" />
+            <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="19.0" />
+            <Button id="updateProduct" mnemonicParsing="false" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #0D92F4;" text="Modifier un produit" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
