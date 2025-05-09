@@ -1,7 +1,6 @@
-package org.example.Data;
+package org.example.projet_phn_fx.Data;
 
 import com.google.gson.annotations.Expose;
-
 import java.io.Serializable;
 
 public class ProduitQuantite implements Serializable {
@@ -13,19 +12,15 @@ public class ProduitQuantite implements Serializable {
         this.quantite = quantite;
     }
 
-    public ProduitElectro getProduit() {
-        return produit;
-    }
+    // Getters/Setters
+    public ProduitElectro getProduit() { return produit; }
+    public void setProduit(ProduitElectro produit) { this.produit = produit; }
 
-    public void setProduit(ProduitElectro produit) {
-        this.produit = produit;
-    }
+    public int getQuantite() { return quantite; }
+    public void setQuantite(int quantite) { this.quantite = quantite; }
 
-    public int getQuantite() {
-        return quantite;
-    }
-
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
+    @Override
+    public String toString() {
+        return produit.toString() + ", Quantité: " + quantite;
     }
 }

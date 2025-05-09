@@ -1,30 +1,29 @@
-package org.example.Data;
+package org.example.projet_phn_fx.Data;
 
-
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class Accessoires extends ProduitElectro {
-    private String typeAccessoires;
+    private final StringProperty typeAccessoires = new SimpleStringProperty();
 
-    public Accessoires(int ID, String nom, String fabricant, long prix, String ram, String rom, String OS, String CPU, String typeAccessoires) {
+    public Accessoires(int ID, String nom, String fabricant, long prix,
+                       String ram, String rom, String OS, String CPU,
+                       String typeAccessoires) {
         super(ID, nom, fabricant, prix, ram, rom, OS, CPU);
-        this.typeAccessoires = typeAccessoires;
+        setTypeAccessoires(typeAccessoires);
     }
 
-    public Accessoires(int ID, String nom, String fabricant, long prix, String ram, String rom, String OS, String CPU) {
-        super(ID, nom, fabricant, prix, ram, rom, OS, CPU);
-    }
+    // Property getter
+    public StringProperty typeAccessoiresProperty() { return typeAccessoires; }
 
-    public String getTypeAccessoires() {
-        return typeAccessoires;
-    }
-
+    // Getter/Setter normaux
+    public String getTypeAccessoires() { return typeAccessoires.get(); }
     public void setTypeAccessoires(String typeAccessoires) {
-        this.typeAccessoires = typeAccessoires;
+        this.typeAccessoires.set(typeAccessoires);
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", Type data.Accessoires: " + typeAccessoires;
+        return super.toString() + ", Type Accessoires: " + getTypeAccessoires();
     }
 }
-

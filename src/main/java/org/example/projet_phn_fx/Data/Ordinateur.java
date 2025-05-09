@@ -1,6 +1,4 @@
-package org.example.Data;
-
-
+package org.example.projet_phn_fx.Data;
 
 public class Ordinateur extends ProduitElectro {
     private String GPU;

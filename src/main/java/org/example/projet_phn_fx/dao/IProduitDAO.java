@@ -1,6 +1,6 @@
-package org.example.dao;
+package org.example.projet_phn_fx.dao;
 
-import org.example.Data.ProduitElectro;
+import org.example.projet_phn_fx.Data.ProduitElectro;
 
 import java.util.List;
 

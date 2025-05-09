@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FAD59A;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.projet_phn_fx.GestionProduitController"
+      spacing="10">
+
+    <children>
+        <!-- Titre -->
+        <Label text="Gestion de Produits Électroniques" style="-fx-font-size: 24; -fx-font-weight: bold;"
+               alignment="CENTER" prefWidth="800.0"/>
+
+        <!-- Type de produits -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="Type de produits:"/>
+            <ChoiceBox fx:id="typeProduit" prefWidth="150.0">
+            </ChoiceBox>
+        </HBox>
+
+        <!-- Nom du produit -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="Nom du produit:" style="-fx-background-color: #F0F1C5;" prefWidth="150.0"/>
+            <TextField fx:id="nomProduit" prefWidth="200.0"/>
+        </HBox>
+
+        <!-- Fabricant -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="Fabricant:" style="-fx-background-color: #F0F1C5;" prefWidth="150.0"/>
+            <TextField fx:id="fabricant" prefWidth="200.0"/>
+        </HBox>
+
+        <!-- Prix et CPU -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="Prix (€):" style="-fx-background-color: #F0F1C5;" prefWidth="150.0"/>
+            <TextField fx:id="prix" prefWidth="100.0"/>
+            <Separator orientation="VERTICAL" prefHeight="30.0"/>
+            <Label text="CPU:" style="-fx-background-color: #F0F1C5;" prefWidth="100.0"/>
+            <TextField fx:id="cpu" prefWidth="150.0"/>
+        </HBox>
+
+        <!-- RAM, ROM et OS -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="RAM:" style="-fx-background-color: #F0F1C5;" prefWidth="80.0"/>
+            <TextField fx:id="ram" prefWidth="100.0"/>
+            <Separator orientation="VERTICAL" prefHeight="30.0"/>
+            <Label text="ROM:" style="-fx-background-color: #F0F1C5;" prefWidth="80.0"/>
+            <TextField fx:id="rom" prefWidth="100.0"/>
+            <Separator orientation="VERTICAL" prefHeight="30.0"/>
+            <Label text="OS:" style="-fx-background-color: #F0F1C5;" prefWidth="80.0"/>
+            <TextField fx:id="os" prefWidth="150.0"/>
+        </HBox>
+
+        <!-- Quantité et Type d'accessoire -->
+        <HBox spacing="10" alignment="CENTER_LEFT" padding="10.0">
+            <Label text="Quantité:" style="-fx-background-color: #F0F1C5;" prefWidth="150.0"/>
+            <TextField fx:id="quantite" prefWidth="100.0"/>
+            <Label text="Type d'accessoire:" style="-fx-background-color: #F0F1C5;" prefWidth="150.0"
+                   visible="false" fx:id="labelTypeAccessoire"/>
+            <TextField fx:id="typeAccessoire" prefWidth="150.0" visible="false"/>
+        </HBox>
+
+        <!-- Boutons -->
+        <HBox alignment="CENTER" spacing="20" prefHeight="60.0" prefWidth="800.0" padding="10.0">
+            <Button fx:id="addProduct" text="Ajouter" style="-fx-background-color: #90C67C; -fx-font-weight: bold; -fx-min-width: 120;"/>
+            <Button fx:id="dropProduct" text="Supprimer" style="-fx-background-color: #F7374F; -fx-font-weight: bold; -fx-min-width: 120;"/>
+            <Button fx:id="updateProduct" text="Modifier" style="-fx-background-color: #0D92F4; -fx-font-weight: bold; -fx-min-width: 120;"/>
+            <Button fx:id="clearForm" text="Vider" style="-fx-background-color: #E0E0E0; -fx-font-weight: bold; -fx-min-width: 120;"/>
+        </HBox>
+
+        <!-- TableView -->
+        <TableView fx:id="produitsTable" prefHeight="250.0" prefWidth="780.0" style="-fx-font-size: 14;">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="nomCol" text="Nom" prefWidth="150"/>
+                <TableColumn fx:id="typeCol" text="Type" prefWidth="100"/>
+                <TableColumn fx:id="fabricantCol" text="Fabricant" prefWidth="120"/>
+                <TableColumn fx:id="prixCol" text="Prix (€)" prefWidth="80" style="-fx-alignment: CENTER_RIGHT;"/>
+                <TableColumn fx:id="quantiteCol" text="Stock" prefWidth="70" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="cpuCol" text="CPU" prefWidth="120"/>
+                <TableColumn fx:id="ramCol" text="RAM" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </children>
+</VBox>

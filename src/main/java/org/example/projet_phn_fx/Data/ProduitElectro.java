@@ -1,7 +1,8 @@
-package org.example.Data;
+package org.example.projet_phn_fx.Data;
 
 
 import com.google.gson.annotations.Expose;
+import javafx.beans.property.*;
 
 import java.io.Serializable;
 
@@ -171,4 +172,5 @@ public class ProduitElectro implements Serializable {
         this.GPU = GPU;
     }
 }
+
 

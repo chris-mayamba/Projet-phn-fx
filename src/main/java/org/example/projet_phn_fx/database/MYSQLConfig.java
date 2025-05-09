@@ -1,4 +1,6 @@
-package org.example.database;
+package org.example.projet_phn_fx.database;
+
+
 
 public class MYSQLConfig implements IDatabaseConfig{
 
