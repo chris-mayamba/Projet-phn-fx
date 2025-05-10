@@ -4,6 +4,8 @@ module org.example.projet_phn_fx {
     requires com.google.gson;
     requires java.sql;
 
+    opens org.example.projet_phn_fx.Data to javafx.base;
+
 
     opens org.example.projet_phn_fx to javafx.fxml;
     exports org.example.projet_phn_fx;
